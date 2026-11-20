@@ -46,7 +46,7 @@
     <div class="login">
 
         <h2>Login</h2>
-         <h3 style="color: red;">{{form.errorMsg}}</h3>
+         <h3 style="color: red;">{{form.errorMessage}}</h3>
 
         <form (submit)="login()">
 
@@ -54,12 +54,14 @@
                 <label for="login">Login:</label>
                 <input type="text" id="login" name="login" [(ngModel)]="form.data.login" 
                        placeholder="Enter login" required>
+                       <p style="color: red;">{{form.inputerror.login}}</p>
             </div>
 
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" [(ngModel)]="form.data.password"
                        placeholder="Enter Password" required>
+                       <p style="color: red;">{{form.inputerror.password}}</p>
             </div>
 
             <button type="submit">Login</button>

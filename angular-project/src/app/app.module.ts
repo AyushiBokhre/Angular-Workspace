@@ -10,6 +10,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { RoleComponent } from './role/role.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     WelcomeComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent,
+    RoleComponent
   ],
   imports: [
     BrowserModule,

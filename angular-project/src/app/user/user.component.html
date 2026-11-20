@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add User</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .signup {
+            border: 1px solid black;
+            width: 450px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+        }
+
+        label {
+            width: 150px;
+            text-align: left;
+        }
+
+        input {
+            padding: 10px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup">
+
+        <h2>Add User</h2>
+         <h3 style="color: red;">{{form.errorMessage}}</h3>
+          <h3 style="color: green;">{{form.successMessage}}</h3>
+
+        <form (submit)="save()">
+
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" [(ngModel)]="form.data.firstName"
+                       placeholder="Enter First Name" required>
+                       <p style="color: red;">{{form.inputerror.firstName}}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" [(ngModel)]="form.data.lastName"
+                       placeholder="Enter Last Name" required>
+                       <p style="color: red;">{{form.inputerror.lastName}}</p>
+            </div>
+            <div class="form-group">
+                <label for="roleId">Role ID:</label>
+                <input type="text" id="roleId" name="roleId" [(ngModel)]="form.data.roleId"
+                       placeholder="Enter Role ID" required>
+                       <p style="color: red;">{{form.inputerror.roleId}}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="login">Login:</label>
+                <input type="text" id="login" name="login" [(ngModel)]="form.data.login"
+                       placeholder="Enter Login" required>
+                       <p style="color: red;">{{form.inputerror.login}}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" [(ngModel)]="form.data.password"
+                       placeholder="Enter Password" required>
+                       <p style="color: red;">{{form.inputerror.password}}</p>
+            </div>
+
+            <button type="submit">Save</button>
+
+        </form>
+
+       
+
+    </div>
+
+</body>
+</html>

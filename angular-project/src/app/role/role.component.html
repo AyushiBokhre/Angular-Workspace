@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add User</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .signup {
+            border: 1px solid black;
+            width: 450px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+        }
+
+        label {
+            width: 150px;
+            text-align: left;
+        }
+
+        input {
+            padding: 10px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup">
+
+        <h2>Add Role</h2>
+         <h3 style="color: red;">{{form.errorMessage}}</h3>
+          <h3 style="color: green;">{{form.successMessage}}</h3>
+
+        <form (submit)="save()">
+
+            <div class="form-group">
+                <label for="name">Role Name:</label>
+                <input type="text" id="name" name="name" [(ngModel)]="form.data.name"
+                       placeholder="Enter Role Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" [(ngModel)]="form.data.description"
+                       placeholder="Enter Description" required>
+            </div>
+
+
+            <button type="submit">Save</button>
+
+        </form>
+
+       
+
+    </div>
+
+</body>
+</html>
