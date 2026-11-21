@@ -32,11 +32,12 @@
         }
 
         .navbar a:hover {
-            background-color: green;
+            background-color: grey;
         }
+
         h2 {
             color: white;
-          
+
         }
     </style>
 </head>
@@ -57,12 +58,12 @@
         <div *ngIf="isLogin()">
 
             <h2>Hii, {{form.data.firstName}}({{form.data.roleName}})</h2>
-            <a (click)="logout()">Logout</a> |
+            <a href="welcome">Welcome</a> |
             <a href="role">Add Role</a> |
             <a href="user">Add User</a> |
-            <a href="#">Role List</a> |
-            <a href="welcome">Welcome</a> |
-
+            <a href="userList">User List</a> |
+            <a (click)="logout()">Logout</a> |
+           
         </div>
         <hr>
 
